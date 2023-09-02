@@ -2,9 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+* body{
+  background-color: #FAFAFF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* color */
+.bg-primary {
+  background: #1C1C1C;
+}
+
+.bg-secondary {
+  background: #1F1F1F;
+}
+
+.bg-accent {
+  background: #F7B05B;
+}
+
+.text-accent {
+  color: #F7B05B;
+}
+
+.mobile-nav {
+  @apply block md:hidden fixed top-10 py-2 w-full h-full  duration-500;
+
+  background-color: #1f1f1fe8; 
+
+  
+
+}
+
+nav li a {
+  @apply px-4 py-5 text-lg;
+}
+
+nav li a:hover {
+  color: #f5b465c8;
 }
