@@ -58,7 +58,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className="text-lg">Contact us: 0713600213 or 0788857471</p>
+        <p className="text-lg">Contact: 0713600213 or 0788857471</p>
         <p className="text-sm">&copy; {currentYear}. All rights reserved.</p>
       </div>
     </footer>
