@@ -84,6 +84,11 @@ const Header = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a href="/cv" className={`font-semibold text-lg`}>
+              CV
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -143,6 +148,11 @@ const Header = () => {
               onClick={handleToggle}
             >
               Contact
+            </a>
+          </li>
+          <li className="my-4">
+            <a href="/resume" className={`font-semibold text-lg`}>
+              Resume
             </a>
           </li>
         </ul>
