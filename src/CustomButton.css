@@ -1,0 +1,54 @@
+.glow-on-hover-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.glow-on-hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #1C1C1C;
+  border: 1px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  margin-bottom: -2px;
+}
+
+.glow-on-hover span {
+  position: relative;
+  z-index: 1;
+}
+
+.glow-on-hover:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9b21bd;
+  transition: all 0.35s;
+}
+
+.glow-on-hover:hover {
+  color: #000000;
+
+}
+
+.glow-on-hover:hover:after {
+  width: 100%;
+}
