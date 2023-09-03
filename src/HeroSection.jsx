@@ -18,7 +18,7 @@ function HeroSection() {
           {/* Image on the right for tablets and desktops */}
           <div className="md:w-1/2 image-container">
             <div className="image-wrapper md:w-500 md:h-500">
-              <img src={LilianImage} alt="Lilian" className="custom-image-size" />
+              <img src={LilianImage} alt="Lilian" className="custom-image-size animated-image" />
             </div>
           </div>
         </div>

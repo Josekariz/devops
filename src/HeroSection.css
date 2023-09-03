@@ -63,3 +63,22 @@
     }
   }
   
+  
+  @keyframes rotateAndScale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    90% {
+      transform: rotate(360deg) scale(1.5); /* Rotate a full turn and scale up */
+    }
+    100% {
+      transform: rotate(360deg) scale(1); /* Return to initial scale */
+    }
+  }
+  
+  /* Apply the animation to the image */
+  .animated-image {
+    animation: rotateAndScale 3s ease-in-out; /* Adjust duration and easing */
+    transition: transform 2s ease-in-out; /* Add a smooth transition */
+  }
+
