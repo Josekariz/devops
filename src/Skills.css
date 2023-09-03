@@ -1,0 +1,58 @@
+.percentage-container {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.percentage-bar {
+  width: 0;
+  height: 100%;
+  transition: width 2s ease-in-out, background-color 2s ease-in-out;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Define colors for different percentage ranges */
+.percentage-bar-95 {
+  background-color: #ffab45;
+}
+
+.percentage-bar-90 {
+  background-color: #F7B05B;
+}
+
+.percentage-text {
+  color: #fff;
+  padding: 2px 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Add the fill animation */
+@keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 4px);
+    /* Adjust the width to account for the border */
+  }
+}
+
+.percentage-bar.animate-percentage {
+  animation: fillAnimation 4s ease-in-out forwards;
+}
