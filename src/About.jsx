@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineInstagram, AiOutlineMail, AiOutlineLinkedin } from 'react-icons/ai';
+import { AiOutlineInstagram,  AiOutlineLinkedin } from 'react-icons/ai';
 
 function About() {
   return (
@@ -37,7 +37,7 @@ function About() {
           <p className="text-lg">
             Feel free to reach out to me at:
             <br />
-            <a href="#" className="text-blue-600 hover:text-blue-800">
+            <a href='gmail.com' className="text-blue-600 hover:text-blue-800">
               liliankariuki958@gmail.com
             </a>
           </p>
