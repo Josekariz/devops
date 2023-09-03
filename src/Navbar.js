@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
 
   const handleToggle = () => setToggle(!toggle);
+
+  // Update the current hash when the hash changes (e.g., when scrolling to different sections)
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   // Add a class to the header when mobile navigation is open
   const headerClassName = toggle
@@ -18,16 +32,13 @@ const Header = () => {
       </a>
 
       {/* Desktop Nav */}
-
-      
-      {/* Note: The # before the links is to point to the div as this is an spa but when it is linked to another page just delete the # and create a route in react using router to that page */}
       <nav className="hidden md:block">
         <ul className="flex">
           <li>
             <a
-              href="/"
+              href="/#home"
               className={`font-semibold text-lg ${
-                window.location.hash === "#about" ? "text-accent" : ""
+                currentHash === "#home" ? "text-accent" : ""
               }`}
             >
               Home
@@ -37,7 +48,7 @@ const Header = () => {
             <a
               href="/#about-me"
               className={`font-semibold text-lg ${
-                window.location.hash === "#about-me" ? "text-accent" : ""
+                currentHash === "#about-me" ? "text-accent" : ""
               }`}
             >
               About
@@ -47,7 +58,7 @@ const Header = () => {
             <a
               href="/#skills"
               className={`font-semibold text-lg ${
-                window.location.hash === "#skills" ? "text-accent" : ""
+                currentHash === "#skills" ? "text-accent" : ""
               }`}
             >
               Skills
@@ -57,7 +68,7 @@ const Header = () => {
             <a
               href="/#experience"
               className={`font-semibold text-lg ${
-                window.location.hash === "#experience" ? "text-accent" : ""
+                currentHash === "#experience" ? "text-accent" : ""
               }`}
             >
               Experience
@@ -67,7 +78,7 @@ const Header = () => {
             <a
               href="/#contact-me"
               className={`font-semibold text-lg ${
-                window.location.hash === "#contact-me" ? "text-accent" : ""
+                currentHash === "#contact-me" ? "text-accent" : ""
               }`}
             >
               Contact
@@ -81,9 +92,9 @@ const Header = () => {
         <ul className={`flex flex-col items-center justify-center h-full`}>
           <li className="my-4">
             <a
-              href="/#about"
+              href="/#home"
               className={`font-semibold text-lg ${
-                toggle && window.location.hash === "#about" ? "text-accent" : ""
+                toggle && currentHash === "#home" ? "text-accent" : ""
               }`}
               onClick={handleToggle}
             >
@@ -94,9 +105,7 @@ const Header = () => {
             <a
               href="/#about-me"
               className={`font-semibold text-lg ${
-                toggle && window.location.hash === "#about-me"
-                  ? "text-accent"
-                  : ""
+                toggle && currentHash === "#about-me" ? "text-accent" : ""
               }`}
               onClick={handleToggle}
             >
@@ -107,9 +116,7 @@ const Header = () => {
             <a
               href="/#skills"
               className={`font-semibold text-lg ${
-                toggle && window.location.hash === "#skills"
-                  ? "text-accent"
-                  : ""
+                toggle && currentHash === "#skills" ? "text-accent" : ""
               }`}
               onClick={handleToggle}
             >
@@ -120,9 +127,7 @@ const Header = () => {
             <a
               href="/#experience"
               className={`font-semibold text-lg ${
-                toggle && window.location.hash === "#experience"
-                  ? "text-accent"
-                  : ""
+                toggle && currentHash === "#experience" ? "text-accent" : ""
               }`}
               onClick={handleToggle}
             >
@@ -133,13 +138,11 @@ const Header = () => {
             <a
               href="/#contact-me"
               className={`font-semibold text-lg ${
-                toggle && window.location.hash === "#contact-me"
-                  ? "text-accent"
-                  : ""
+                toggle && currentHash === "#contact-me" ? "text-accent" : ""
               }`}
               onClick={handleToggle}
             >
-              experience
+              Contact
             </a>
           </li>
         </ul>
