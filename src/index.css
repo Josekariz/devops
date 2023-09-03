@@ -24,11 +24,8 @@
 }
 
 .mobile-nav {
-  @apply block md:hidden fixed top-10 py-2 w-full h-full  duration-500;
-
-  background-color: #1f1f1fe8; 
-
-  
+  @apply block md:hidden fixed top-10 py-2 w-full h-full duration-500;
+  background-color: #1f1f1fe8;
 
 }
 

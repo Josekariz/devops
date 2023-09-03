@@ -1,3 +1,4 @@
+import HeroSection from "./HeroSection";
 import Header from "./Navbar";
 
 
@@ -6,7 +7,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      The app constant starts here.
+      <br/>
+      <HeroSection/>
     </div>
   );
 }
