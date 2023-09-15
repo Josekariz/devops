@@ -84,7 +84,7 @@ const Contact = () => {
       </div>
       <p className="font-bold my-2 text-lg">Or</p>
       {formSubmitted ? (
-        <div className="mx-auto w-2/3 bg-green-100 p-4 rounded-lg shadow-md hover:bg-red-100">
+        <div className="mx-auto w-4/5 bg-green-100 p-4 rounded-lg shadow-md hover:bg-red-100">
           <p className="text-black text-lg font-semibold  text-center">
             Thank you for your submission! I will get back to you soon.
           </p>
