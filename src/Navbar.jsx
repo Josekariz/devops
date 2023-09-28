@@ -85,7 +85,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="/cv" className={`font-semibold text-lg`}>
+            <a href="https://docs.google.com/document/d/1aTcrcxk_ZKSPBzIMn9pnCZeO6ftHrIedRodLLZ7XRuo/edit?usp=sharing" className={`font-semibold text-lg`}>
               CV
             </a>
           </li>
@@ -151,7 +151,7 @@ const Header = () => {
             </a>
           </li>
           <li className="my-4">
-            <a href="/resume" className={`font-semibold text-lg`}>
+            <a href="https://docs.google.com/document/d/1aTcrcxk_ZKSPBzIMn9pnCZeO6ftHrIedRodLLZ7XRuo/edit?usp=sharing" className={`font-semibold text-lg`}>
               Resume
             </a>
           </li>
